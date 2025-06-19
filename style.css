@@ -1,11 +1,18 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(to right, #ff758c, #ff7eb3);
   color: #fff;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -22,34 +29,57 @@ body {
 .container {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 30px 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  max-width: 600px;
-  margin: 100px auto;
+  max-width: 90%;
+  width: 400px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
 #countdown {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
 #countdown div {
-  font-size: 2rem;
+  flex: 1 1 40%;
+  font-size: 1.2rem;
 }
 
 #countdown span {
   display: block;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
 .message {
-  margin-top: 20px;
-  font-size: 1.5rem;
+  margin-top: 15px;
+  font-size: 1.2rem;
   color: #fffad1;
   font-weight: bold;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #countdown span {
+    font-size: 2rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
 }
