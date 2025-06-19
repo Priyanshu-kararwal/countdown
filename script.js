@@ -30,8 +30,7 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// ---------------- FIREWORKS ------------------
-
+// ------------- Fireworks -------------
 function launchFireworks() {
   const canvas = document.getElementById("fireworks");
   const ctx = canvas.getContext("2d");
